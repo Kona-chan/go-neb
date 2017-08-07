@@ -278,7 +278,7 @@ func runExpansionsForService(expans []types.Expansion, event *gomatrix.Event, bo
 func (c *Clients) onBotOptionsEvent(client *gomatrix.Client, event *gomatrix.Event) {
 	// see if these options are for us. The state key is the user ID with a leading _
 	// to get around restrictions in the HS about having user IDs as state keys.
-	targetUserID := strings.TrimPrefix(event.StateKey, "_")
+	targetUserID := strings.TrimPrefix(*event.StateKey, "_")
 	if targetUserID != client.UserID {
 		return
 	}
@@ -300,7 +300,7 @@ func (c *Clients) onBotOptionsEvent(client *gomatrix.Client, event *gomatrix.Eve
 }
 
 func (c *Clients) onRoomMemberEvent(client *gomatrix.Client, event *gomatrix.Event) {
-	if event.StateKey != client.UserID {
+	if *event.StateKey != client.UserID {
 		return // not our member event
 	}
 	m := event.Content["membership"]

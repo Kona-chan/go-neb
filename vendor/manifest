@@ -144,7 +144,7 @@
 		{
 			"importpath": "github.com/matrix-org/gomatrix",
 			"repository": "https://github.com/matrix-org/gomatrix",
-			"revision": "e66d1ef529b7851262b49dc42a26ff1f1d1d9e4d",
+			"revision": "1ed341398681aa2d38d3c1bb94e107c386076a42",
 			"branch": "master"
 		},
 		{
