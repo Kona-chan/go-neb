@@ -9,6 +9,7 @@ import (
 	"os"
 	"path/filepath"
 
+	_ "github.com/Kona-chan/go-neb-services/anon"
 	_ "github.com/Kona-chan/go-neb-services/ddg"
 	log "github.com/Sirupsen/logrus"
 	"github.com/matrix-org/dugong"
